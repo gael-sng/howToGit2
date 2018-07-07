@@ -1,6 +1,3 @@
-oi eu sou o gabriel
-oi eu sou o cartaz
-
 git init
 	Iniciar o git em uma pasta
 git status
@@ -52,5 +49,18 @@ se quiser criar uma versão intermediaria do merge tera que abrir o arquivo que 
 	>>>>>>>>>>
 (lembrando tem que aiodna dar git add e commit dos arquivos modificados para terminar o merge)
 =========================================
+COMANDOS COM O GIT HUB
+
+git remote add <nome_do_repositorio_remote> <URL>
+	linka o repositorio atual com um repositorio remoto, e da localmente um apelido para o remositorio remoeto que voce -SEMPRE- vai chamar de origin
+	OBS: <nome_do_repositorio_remote> = origin
+git clone <URL>
+	faz download do remositorio do git hub especificado pela URL
+git fetch
+	Sincroniza a arvore de commits locais com a arvore de commits remota
+git push <apelido_do_repo_remoto> <nome_da_branch_remota>
+	pegas os commits atuais e salva na branch especificada pelo nome
+	o apelido da remota geralmnete vai ser origin
+	Obs: se a branch remotar não existir ela sera criada com o nome passado, tente manter os nomes iguais a sua branch local
 
 
