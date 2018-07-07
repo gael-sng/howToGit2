@@ -17,8 +17,40 @@ git commit -a
 	mistura o comando "git commit" e o "git add -A"(so que sme os untrackeds) onde ele ira adicionar apra o commit TODOS os arquivos modificados
 git log
 	Lista todos os commit feitos até então
+git log --graph --all --abbrev-commit --decorate --oneline
+	LOG LEGAL, printa a arvore de commit no terminal e msotra a posição das brnachs e o head
 git show <hash_de_um_commit>
 	mostrara o commit detalhadamente, a documentação dele e o que foi modificado e aonde
 git show <nome_do_arquivo>
 	mostrar modificações feitas naquele arquivo no commit atual
-	
+
+git checkout <hash_deum_commit>
+	muda o ponteiro HEAD para um commit identificado pela hash, lembrando que muda o estado do projeto apra o estado que tava naquele  komento do commit
+git branch <nome_da_branch_a_ser_criada>
+	Cria uma branch com aquele nome
+git checkout <nome da brnach>
+	MUda a HEAD para a branch passada por parametro,lembrando... mesma coisa que outro checkout
+git branch -d <nome_da_branch_a_ser_DELETADA>
+	auto descritiva
+git merge <nome_da_branch_que_voce_vai_pegar_as_alterações>
+	cria um novo commit que vai ser o merge do commit ATUAL e do apontado pela branch passada por parametro, e pega o branch atual e aponta para esse novo commit
+git merge <hash_de_um_commit>
+	cria um novo commit que vai ser o merge do commit ATUAL e do commit identificado pela hash passada por parametro, e pega o branch atual e aponta para esse novo commit
+
+============ SE DEU CONFLITO =========
+para escolher entre uma versão d eum arquivo de uma branch ou de outra usar:
+git checkout --theirs <nome do arquivo>
+	ignorar a versão da HEAD e pegar a versão do commit que esta sendo mergeado
+git checkout --ours <nome do arquivo>
+	ignorar a versão do commit mergeado e pegar a versão da HEAD
+
+se quiser criar uma versão intermediaria do merge tera que abrir o arquivo que estara com os conflitos delimitados por: 
+	HEAD <<<<<<
+	<trecho de codigo que estava na HEAD>
+	===========
+	<trecho de codigo que estava no comiit mergeado>
+	>>>>>>>>>>
+(lembrando tem que aiodna dar git add e commit dos arquivos modificados para terminar o merge)
+=========================================
+
+
