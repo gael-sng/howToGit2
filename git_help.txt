@@ -11,6 +11,6 @@ git commit
 git commit -m"<documentação do commit>"
 	faz o ommit sem abrir o editor de texto, passar a documentaçõ entre aspas depois do -m
 git commit -a
-	mistura o comando "git commit" e o "git add -A" onde ele ira adicionar apra o commit TODOS os arquivos modificados e untrackeds
+	mistura o comando "git commit" e o "git add -A"(so que sme os untrackeds) onde ele ira adicionar apra o commit TODOS os arquivos modificados
 git log
 	Lista todos os commit feitos até então
